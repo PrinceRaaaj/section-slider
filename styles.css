@@ -1,0 +1,162 @@
+
+body {
+	font-size:62.5%;
+	font-family: 'Lato', sans-serif;
+    margin:0;
+    padding: 0;
+}
+h1 {
+	font-size:13em;
+
+}
+h2 {
+	font-size:8em;
+}
+p {
+	font-size: 4em;
+	line-height:1.3;
+}
+h2 + p {
+	font-size:3em;
+}
+.vertical-center {
+	text-align:center;
+	width:100%;
+	position: absolute;
+	top: 47%;
+	transform: translateY(-47%);
+}
+.vertical-center p {
+	margin-top:23px;
+}
+
+.inner {
+	position: relative;
+	height:100%;
+	width:80%;
+	margin:0 auto;
+}
+
+
+.pagination {
+    position: fixed;
+    right: 0px;
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 1.4em;
+    z-index: 10;
+    width: 500px;
+    height: 600px;
+    background: lightgoldenrodyellow;
+    padding: 2rem 1rem;
+}
+
+.pagination a {
+	display:block;
+	height:20px;
+	margin-bottom:5px;
+	position:relative;
+	padding:4px;
+    text-decoration: none;
+}
+.pagination a::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    right: 9px;
+    bottom: -22px;
+    width: 0; /* Adjust the width as needed */
+    height: 2em; /* Adjust the height as needed */
+    margin-left: 0.5em;
+    border-left: 1px solid black;
+}
+
+.pagination a.active::before{
+    border-left: 3px solid black;
+}
+
+.pagination li:last-child a::before {
+    display: none;
+}
+.pagination a.active:after {
+	box-shadow:inset 0 0 0 5px;
+}
+.pagination a {
+	display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+.hover-text{
+    margin-right: 1rem;
+}
+/* .pagination a .hover-text {
+	position:absolute;
+	right:15px;
+	top:7px;
+	opacity:0;
+	-webkit-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+	padding-right: 15px;
+}
+.pagination a:hover .hover-text {
+	opacity: 1;
+} */
+.pagination a:after {
+	-webkit-transition:box-shadow 0.5s ease;
+	transition:box-shadow 0.5s ease;
+	width:10px;
+	height:10px;
+	display: block;
+	border:1px solid;
+	border-radius:50%;
+	content:'';
+	position: absolute;
+	margin:auto;
+	top:0;
+	right:4px;
+	bottom:0;
+}
+
+.pagination > li {
+    list-style-type: none;
+}
+
+
+
+.vertical-center p.cta {
+	margin-top:5px;
+}
+.vertical-center a:link,
+.vertical-center a:visited {
+	color:white;
+	text-decoration:none;
+
+	font-size:0.6em;
+}
+.vertical-center a:hover {
+	text-decoration: underline;
+}
+.arrow {
+	position: relative;
+	padding-right:15px;
+}
+
+.arrow:before,
+.arrow:after {
+	content:'';
+	position: absolute;
+	right:0;
+	top:7px;
+
+	width:2px;
+	height:12px;
+	background: white;
+}
+.arrow:before {
+	transform: rotate(45deg);
+	top:15px;
+}
+.arrow:after {
+	transform: rotate(-45deg);
+
+}

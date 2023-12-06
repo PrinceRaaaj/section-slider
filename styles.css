@@ -160,3 +160,9 @@ h2 + p {
 	transform: rotate(-45deg);
 
 }
+
+@media only screen and (max-width: 768px) {
+    .pagination {
+        display: none;
+    }
+  }
